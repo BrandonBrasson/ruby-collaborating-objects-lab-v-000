@@ -17,11 +17,13 @@ def self.new_by_filename(filename)
    song = Song.new(name)
    song.artist =  Artist.new(artist)
    song.artist.songs << []
-
+   duplicate = Artist.all.detect {|i| i.name == artist }
+   if !duplicate
      puts song.artist.save
    end
-   
-
+   song
+   # song.artist = artist
+ end
 #  def self.new_by_filename(new_file)
   #  @@all.each do |song|
   #  if song.name == @song
