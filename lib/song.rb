@@ -17,8 +17,8 @@ def self.new_by_filename(file_name)
    song = Song.new(name)
    song.artist =  Artist.new(artist)
    song.artist.songs << []
-   artist = Song.all.size {|i| i.name == artist }
-   if artist
+   artist = Artist.all.detect {|i| i.name == artist }
+   if artist_spec
      puts song.artist.save
    end
 song
