@@ -11,10 +11,14 @@ def songs
   @artist=[]
 end
 
-def self.new_by_filename(filename)
-   
-   duplicate = Artist.all.detect {|i| i.name == artist }
-   if !duplicate
+def self.new_by_filename(file_name)
+   name = file_name.split(" - ")[1]
+   artist = file_name.split(" - ")[0]
+   song = Song.new(name)
+   song.artist =  Artist.new(artist)
+   song.artist.songs << []
+   artist = Artist.all.detect {|i| i.name == artist }
+   if artist
      puts song.artist.save
    end
 song
