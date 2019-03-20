@@ -16,7 +16,7 @@ end
     @@all.find do |song|
     if song.name == @song
       return song
-    else new_instance = Song.new_by_filename(file_name)
+    else @song = Song.new_by_filename(file_name)
     return song
   end
 end
