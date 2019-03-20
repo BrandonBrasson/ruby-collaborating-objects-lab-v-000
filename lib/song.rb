@@ -21,7 +21,7 @@ def self.new_by_filename(filename)
      puts song.artist.save
    end
    
-  
+
 #  def self.new_by_filename(new_file)
   #  @@all.each do |song|
   #  if song.name == @song
