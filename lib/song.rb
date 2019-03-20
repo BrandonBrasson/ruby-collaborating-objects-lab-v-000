@@ -13,7 +13,7 @@ end
 
 
   def self.new_by_filename(filename)
-  @name << self
+  @song << self
   end
 
 
