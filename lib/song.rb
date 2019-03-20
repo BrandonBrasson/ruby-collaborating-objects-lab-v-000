@@ -20,9 +20,7 @@ def self.new_by_filename(new_file)
    song.artist.songs << song
      song.artist.save
    end
-   song
-   # song.artist = artist
- end
+
 #  def self.new_by_filename(new_file)
   #  @@all.each do |song|
   #  if song.name == @song
