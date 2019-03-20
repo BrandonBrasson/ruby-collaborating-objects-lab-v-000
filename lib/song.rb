@@ -12,7 +12,7 @@ def songs
 end
 
 
-  def self.new_by_filename(filename)
+  def self.new_by_filename(new_file)
     @@all.each do |song|
     if song.name == @song
       return song
