@@ -11,21 +11,27 @@ def songs
   @artist=[]
 end
 
-
 def self.new_by_filename(new_file)
- # binding.pry
- name = new_file.split(" - ")[1]
- artist = new_file.split(" - ")[0]
- song = Song.new(name)
- song.artist =  Artist.new(artist)
- song.artist.songs << song
- duplicate = Artist.all.detect {|i| i.name == artist }
- if !duplicate
-   song.artist.save
+  
+   name = new_file.split(" - ")[1]
+   artist = new_file.split(" - ")[0]
+   song = Song.new(name)
+   song.artist =  Artist.new(artist)
+   song.artist.songs << song
+     song.artist.save
+   end
+   song
+   # song.artist = artist
  end
- song
- # song.artist = artist
-end
+#  def self.new_by_filename(new_file)
+  #  @@all.each do |song|
+  #  if song.name == @song
+    #  return song
+  #  else @song = Song.new_by_filename(filename)
+  #  return song
+#  end
+#end
+#end
 
 
 
