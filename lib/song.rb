@@ -17,8 +17,9 @@ def self.new_by_filename(filename)
    song = Song.new(name)
    song.artist =  Artist.new(artist)
    song.artist.songs << []
-  if  Artist.all.detect {|i| i.name == artist }
-   return song.artist.save
+   duplicate = Artist.all.detect {|i| i.name == artist }
+   if !duplicate
+     puts song.artist.save
    end
 song
  end
