@@ -13,9 +13,14 @@ end
 
 
   def self.new_by_filename(filename)
-  Song < self
+    @@all.find do |artist|
+    if artist.name == @name
+      return artist
+    else new_artist = Artist.new(name)
+    return artist
   end
-
+end
+end
 
 
 
