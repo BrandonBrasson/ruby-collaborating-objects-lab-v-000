@@ -15,9 +15,9 @@ end
   def self.new_by_filename(filename)
     @@all.find do |song|
     if song.name == @song
-      return artist
+      return song
     else new_instance = Song.new_by_filename(file_name)
-    return artist
+    return song
   end
 end
 end
