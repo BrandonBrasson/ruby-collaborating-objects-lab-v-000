@@ -13,7 +13,7 @@ end
 
 
   def self.new_by_filename(filename)
-  @@all=[]
+  @@all << self
   end
 
 
